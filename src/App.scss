@@ -1,6 +1,20 @@
-@import "./cscc/variables/colors.scss";
-@import "./cscc/variables/margins.scss";
-@import "./cscc/helpers/mixins.scss";
+@import "./scss/variables/colors.scss";
+@import "./scss/variables/margins.scss";
+@import "./scss/helpers/mixins.scss";
+@import "./scss/variables/columns.scss";
+@import "./scss/helpers/functions.scss";
+@import "./scss/helpers/reset.scss";
+@import "./scss/helpers/devices.scss";
+
+
+
+
+.App{
+    width: 100%;
+    position: relative;
+    max-width: 1346px;
+    margin: 0 auto;
+}
 
 
 
@@ -14,5 +28,15 @@
     }
     li{
         list-style-type: none;
+        cursor: pointer;
+        &:hover{
+            background-color: $warning;
+        }
     }
+}
+
+.col-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
