@@ -1,4 +1,30 @@
+@import "../variables/layout.scss";
+@import "../helpers/functions.scss";
+@import "../variables/colors.scss";
+
+
 @mixin flexbox() {
     display: flex;
     justify-content: space-evenly;
+}
+
+
+@mixin buttonFill($theme) {
+    @if($theme == "outline") {
+        background-color: $primary;
+    } @else {
+        background-color: $secondary;
+    }
+}
+
+@mixin buttonSize($size) {
+    @if($size == "xl") {
+        padding: rem($p-sm) rem($p-xl);
+    }@else if ($size == "sm"){
+        padding: rem($p-sm) rem($p-sm);
+        background-color: $secondary;
+    }@else{
+        padding: rem($p-sm) rem($p-md) ;
+        background-color: $success;
+    }
 }

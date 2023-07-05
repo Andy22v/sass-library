@@ -1,4 +1,5 @@
 import "./App.scss";
+import Button from "./components/button";
 
 function App() {
   return (
@@ -23,6 +24,11 @@ function App() {
         <div className="col-1">col-1</div>
         <div className="col-1">col-1</div>
         <div className="col-1">col-1</div>
+      </div>
+      <div className="btn-contain">
+        <Button label="go to" icon iconLeft outline size="xl" />
+        <Button label="go to" icon iconLeft outline size="md" />
+        <Button label="go to" icon iconLeft outline size="sm" />
       </div>
 
       {/* <div className="col-container">

@@ -1,0 +1,34 @@
+@import "../../scss/helpers/mixins.scss";
+
+@import "../../scss/variables/layout.scss";
+
+
+.Button{
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+
+    &.iconLeft{
+        flex-direction: row-reverse;
+    }
+    &.outline{
+        @include buttonFill(outline)
+    }
+    &.fill{
+       @include buttonFill(fill)
+    }
+    &.xl {
+        @include buttonSize(xl)
+    }
+    &.sm {
+        @include buttonSize(sm)
+
+    }
+    &.md{
+        @include buttonSize(md)
+
+    }
+}
