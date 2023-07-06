@@ -1,7 +1,15 @@
+import { useState } from "react";
 import "./App.scss";
 import Button from "./components/button";
+import { Form, InputPass } from "./components/form";
 
 function App() {
+  const [inputValue, setInputValue] = useState();
+  const [inputPass, setInputPass] = useState();
+
+  console.log(inputValue);
+  console.log(inputPass);
+
   return (
     <div className="App">
       <div className="container">
@@ -29,6 +37,23 @@ function App() {
         <Button label="go to" icon iconLeft outline size="xl" />
         <Button label="go to" icon iconLeft outline size="md" />
         <Button label="go to" icon iconLeft outline size="sm" />
+      </div>
+      <div className="form-contain">
+        <Form
+          id={"name"}
+          name="name"
+          placeholder="Your name"
+          label={"name"}
+          handleChange={setInputValue}
+        />
+        <InputPass
+          id={"password"}
+          type="password"
+          name="password"
+          placeholder="Your Password"
+          label={"password"}
+          handleChange={setInputPass}
+        />
       </div>
 
       {/* <div className="col-container">

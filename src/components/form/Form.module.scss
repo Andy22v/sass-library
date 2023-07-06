@@ -1,0 +1,68 @@
+@import "../../scss/helpers/mixins.scss";
+
+@import "../../scss/variables/layout.scss";
+
+.inputForm {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    margin-bottom: rem($m-md);
+  
+    &.error {
+      .input {
+        border: 1px solid $danger;
+      }
+  
+      .label {
+        color: $danger;
+      }
+    }
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: rem($m-xxs);
+  }
+  
+  .inputWrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .input {
+    width: 100%;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 1px solid black;
+    border-radius: rem(5px);
+    padding: rem($p-xs) rem($p-sm);
+    margin-bottom: rem($m-xxs);
+  
+    &:focus {
+      border: 1px solid blue;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    }
+  }
+  
+  .errorMessage {
+    color: $danger;
+    display: block;
+    font-size: rem(12px);
+  }
+  
+  .icon {
+    position: absolute;
+    width: rem(32px);
+    height: rem(32px);
+    right: rem($m-sm);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
