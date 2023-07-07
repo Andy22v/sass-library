@@ -1,0 +1,45 @@
+.InputCheckbox {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    
+    left: 50px;
+  }
+  
+  .input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+   
+    transition: all 0.5s ease;
+  
+    &.activeInput {
+      background-color: greenyellow;
+    }
+  }
+  
+  .checked {
+    position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  
+    &.activeChecked {
+      opacity: 1;
+    }
+  }

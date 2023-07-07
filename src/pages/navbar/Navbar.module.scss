@@ -1,0 +1,42 @@
+.Navbar{
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    padding: 12px;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(73, 220, 213) ;
+    color: #333;
+    z-index: 10;
+}
+
+
+.menuList{
+    display: flex;
+    gap: 50px;
+    position: relative;
+
+    &_items{
+        list-style-type: none;
+    }
+}
+
+.menu_Label{
+    cursor: pointer;
+}
+
+.menu_Dropdown {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.open{
+    visibility: visible;
+      opacity: 1;
+
+}
